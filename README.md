@@ -1,59 +1,37 @@
-# Homework 6: Analysis and Application of Remote Sensing & Geospatial Information
+# 作業六：空間預測對決 + 期末專案提案
 
-## Overview
+## 專案概述
 
-This repository contains the materials and solutions for Homework 6 in the Analysis and Application of Remote Sensing & Geospatial Information course.
+此作業範例選用2025年7月28日的0728豪雨事件，以及2025年11月11日的鳳凰颱風，分析範圍為宜蘭縣以及花蓮縣。兩者在該地的降雨型態上有所不同，前者對東部地區影響不大，且降雨範圍較為平均。而後者受外圍環流與東北季風的共伴效應，則對北部及東部地區帶來致災性的超大豪雨。
 
-## Files
+本專案以此進行1000m網格的降雨量推估與比較分析，探討不同雨量內插與演算法在空間特徵捕捉上的差異。
 
-- `Week6_Shootout.ipynb` - Jupyter notebook containing Week 6 shootout exercises and solutions
-- `README.md` - This file, providing project overview and instructions
-- `data/` - Directory containing rainfall data:
-  - `rain_20240725.csv` - Rainfall data for July 25, 2024
-  - `rain_20250731.csv` - Rainfall data for July 31, 2025
-- `output/` - Directory containing generated analysis results:
-  - `事件1_四種方法比較圖.png` - Comparison chart of four methods for Event 1
-  - `事件1_差異圖.png` - Difference plot for Event 1
-  - `事件2_四種方法比較圖.png` - Comparison chart of four methods for Event 2
-  - `事件2_差異圖.png` - Difference plot for Event 2
-- `bamboo_rainfall.tif` - TIFF file for bamboo rainfall data
-- `bamboo_rf_rainfall.tif` - TIFF file for bamboo random forest rainfall data
-- `bamboo_variance.tif` - TIFF file for bamboo variance data
+## 工作流程
 
-## Requirements
+包含以下階段：
 
-- Python 3.8+
-- Jupyter Notebook
-- Required Python packages:
-  - numpy
-  - pandas
-  - matplotlib
-  - seaborn
+1. 資料前處理 (Data Preprocessing)
+2. 空間變異分析 (Variogram Modeling)
+3. 四大內插方法比較 (Prediction Shootout)
+4. 不確定性分析 (Uncertainty Analysis)
+5. 成果匯出 (GeoTIFF Export)
 
-## Installation
 
-Install the required packages using pip:
+## 檔案結構
 
-```bash
-pip install numpy pandas matplotlib seaborn
-```
-
-## Usage
-
-1. Clone or download this repository
-2. Navigate to the project directory
-3. Open the Jupyter notebook:
-   ```bash
-   jupyter notebook Week6_Shootout.ipynb
-   ```
-4. Run the cells in order to complete the exercises
-
-## Course Information
-
-**Course:** Analysis and Application of Remote Sensing & Geospatial Information  
-**Assignment:** Homework 6  
-**Topic:** Week 6 Shootout exercises
-
-## Author
-
-Created for the Remote Sensing & Geospatial Information course.
+- `Week6_Shootout.ipynb` - Jupyter Notebook，主程式
+- `README.md` - 本檔案，提供專案概述與說明
+- `data/` - 目錄，包含降雨資料：
+  - `rain_20250728.csv` - 2025年7月28日降雨資料(0728豪雨事件)
+  - `rain_20251111.csv` - 2025年11月11日降雨資料(鳳凰颱風事件)
+- `output/` - 目錄，包含生成的分析結果：
+  - `0728豪雨_1_四種內插比較圖.png` 
+  - `0728豪雨_2_差異圖.png`
+  - `0728豪雨_3_SigmaMap.png` 
+  - `鳳凰颱風_1_四種內插比較圖.png` 
+  - `鳳凰颱風_2_差異圖.png` 
+  - `鳳凰颱風_3_SigmaMap.png` 
+- `fungwong_kriging_rainfall.tif` - 鳳凰颱風kriging金降雨資料TIFF檔
+- `fungwong_kriging_variance.tif` - 鳳凰颱風kriging變異數資料TIFF檔
+- `fungwong_rf_rainfall.tif` - 鳳凰颱風RF降雨資料TIFF檔
+- `遙測空間應用_期末專題初稿.pdf` - 期末專題初稿PDF檔案
