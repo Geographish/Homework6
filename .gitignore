@@ -1,0 +1,25 @@
+# 大型資料檔案
+data/rain_20240725.csv
+data/rain_20240729.csv
+data/rain_20240731.csv
+
+# Bamboo相關TIFF檔案 (本地使用，不上傳GitHub)
+bamboo_rainfall.tif
+bamboo_rf_rainfall.tif
+bamboo_variance.tif
+
+# Python cache files
+__pycache__/
+*.pyc
+*.pyo
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+
+# IDE files
+.vscode/
+.idea/
+
+# 系統檔案
+.DS_Store
+Thumbs.db
