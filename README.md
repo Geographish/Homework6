@@ -8,6 +8,17 @@ This repository contains the materials and solutions for Homework 6 in the Analy
 
 - `Week6_Shootout.ipynb` - Jupyter notebook containing Week 6 shootout exercises and solutions
 - `README.md` - This file, providing project overview and instructions
+- `data/` - Directory containing rainfall data:
+  - `rain_20240725.csv` - Rainfall data for July 25, 2024
+  - `rain_20250731.csv` - Rainfall data for July 31, 2025
+- `output/` - Directory containing generated analysis results:
+  - `事件1_四種方法比較圖.png` - Comparison chart of four methods for Event 1
+  - `事件1_差異圖.png` - Difference plot for Event 1
+  - `事件2_四種方法比較圖.png` - Comparison chart of four methods for Event 2
+  - `事件2_差異圖.png` - Difference plot for Event 2
+- `bamboo_rainfall.tif` - TIFF file for bamboo rainfall data
+- `bamboo_rf_rainfall.tif` - TIFF file for bamboo random forest rainfall data
+- `bamboo_variance.tif` - TIFF file for bamboo variance data
 
 ## Requirements
 
